@@ -68,7 +68,7 @@ def get_s3_client():
 
 # Database Configuration, REPLACE with your RDS credentials
 DB_HOST="gviv0557-db.c3cya82a4mlv.us-east-1.rds.amazonaws.com" 
-DB_NAME = "gviv0557-db"
+DB_NAME = "image_caption_db"
 DB_USER = "admin"
 DB_PASSWORD = "Romeo168"
 
@@ -80,7 +80,7 @@ def get_db_connection():
     """
     try:
         connection = mysql.connector.connect(
-            host=DB_HOST, database=DB_NAME, user=DB_USER, password=DB_PASSWORD
+            host=DB_HOST, database=DB_NAME, user=DB_USER, password=DB_PASSWORD, collation='utf8mb4_general_ci'
         )
         return connection
     except mysql.connector.Error as err:
