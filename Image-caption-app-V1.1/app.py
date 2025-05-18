@@ -58,7 +58,7 @@ def generate_image_caption(image_data):
 app = Flask(__name__)
 
 # AWS S3 Configuration, REPLACE with your S3 bucket
-S3_BUCKET = "gviv0557-s33"
+S3_BUCKET = "gviv0557-s3-v2"
 S3_REGION = "us-east-1"
 
 
@@ -67,10 +67,10 @@ def get_s3_client():
     return boto3.client("s3", region_name=S3_REGION)
 
 # Database Configuration, REPLACE with your RDS credentials
-DB_HOST="gviv0557-db.c3cya82a4mlv.us-east-1.rds.amazonaws.com" 
-DB_NAME = "image_caption_db"
+DB_HOST="image-caption-db.cxst3u0dx2vu.us-east-1.rds.amazonaws.com" 
+DB_NAME = "image-caption-db"
 DB_USER = "admin"
-DB_PASSWORD = "Romeo168"
+DB_PASSWORD = "z[Es5<#_8Y8Vsz1#4G07xSN?5AZW"
 
 def get_db_connection():
     """
